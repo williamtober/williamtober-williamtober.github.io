@@ -10,10 +10,12 @@ import acuteDark from "../../assets/acute_dark.png";
 
 const Projects = () => {
 
+    // store the items as an array of objects... we can save this somewhere else late, but for now this will work.
     const projects = [
         {
             name: "Pokeo",
-            description: "Trading Card Game Management Application",
+            subtitle: "Trading Card Game Management Application",
+            description: "Pokeo is a web application that allows you to search for pokemon cards and count the number of cards you have in your collection. I do plan on converting the application to React Native instead of ReactJS. ",
             link: "https://pokeoapp.com",
             icon: "network-wired",
             technologies: [
@@ -38,9 +40,43 @@ const Projects = () => {
                     icon: "typescript"
                 }
             ]
+        },
+        {
+            name: "Daisy",
+            subtitle: "Discord Utility Bot",
+            description: "Daisy is a lightweight Discord utility bot that provides a variety of features to enhance your discord experience. Mass delete messages based on keyword, create polls, and implement AI chatbots. The source code is available for cloning, and is a great bootstrap for your own Discord bot.",
+            link: "https://github.com/williamtober/daisy",
+            icon: "network-wired",
+            technologies: [
+                {
+                    name: "JavaScript",
+                    icon: "javascript"
+                },
+                {
+                    name: "ExpressJS",
+                    icon: "express"
+                }
+            ]
+        },
+        {
+            name: "Acute",
+            subtitle: "Design System",
+            description: "A project I started early in college, it was my first serious attempt at designing anything. I haven't touched it in a while, but I plan on revamping it soon.",
+            link: "https://github.com/williamtober/acute-design-system", 
+            icon: "network-wired",
+            technologies: [
+                {
+                    name: "Adobe XD",
+                    icon: "adobexd"
+                },
+                {
+                    name: "Figma",
+                    icon: "figma"
+                }
+            ]
         }
-    ]
-    
+    ];
+
     return (
         <section id="projects" class="bg-white dark:bg-gray-900 antialiased">
             <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
