@@ -4,6 +4,7 @@ import { faLinkedin, faTwitter, faGithub } from "@fortawesome/free-brands-svg-ic
 
 const EButton = (props) => {
     const [style, setStyle] = useState("flex flex-row justify-center items-center");
+    const [text, setText] = useState("Link to my ");
     const [icon, setIcon] = useState(null);
 
     const defineType = () => {
@@ -26,14 +27,17 @@ const EButton = (props) => {
         // default icon size are max to the container
         switch(props.icon) {
             case "linkedin":
+                setText(text + "LinkedIn")
                 setIcon(<FontAwesomeIcon icon={faLinkedin} color="black" 
                 className="h-10 text-black dark:text-white transform hover:scale-110 hover:text-secondary aspect-square" />)
                 break;
             case "twitter":
+                setText(text + "Twitter")
                 setIcon(<FontAwesomeIcon icon={faTwitter} color="black" 
                 className="h-10 text-black dark:text-white transform hover:scale-110 hover:text-secondary aspect-square" />)
                 break;
             case "github":
+                setText(text + "Github")
                 setIcon(<FontAwesomeIcon icon={faGithub} color="black" 
                 className="h-10 text-black dark:text-white transform hover:scale-110 hover:text-secondary aspect-square" />)
                 break;
@@ -50,6 +54,7 @@ const EButton = (props) => {
 
     return (
         <button className={style} >
+            <p className="hidden">{text}</p>
             {icon}
         </button>
     )
